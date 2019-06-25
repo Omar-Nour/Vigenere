@@ -12,7 +12,7 @@ int main(void)
    // part 2: build pyramid after validating input..
    for (int i = 0; i < H; i++)
    {
-       for (int dd = 0; dd < (7-i); dd++)
+       for (int dd = 1; dd < (H-i); dd++)
        {
             printf(" ");
        }     
