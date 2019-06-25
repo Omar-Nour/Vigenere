@@ -6,13 +6,13 @@ int main(void)
    int H; 
    do  
    {
-      H = get_int("Height : ");  
+      H = get_int("Height: ");  
    }
    while (H < 1 || H > 8);
    // part 2: build pyramid after validating input..
    for (int i = 0; i < H; i++)
    {
-       for (int dd =0; dd < (8-i); dd++)
+       for (int dd = 0; dd < (7-i); dd++)
        {
             printf(" ");
        }     
