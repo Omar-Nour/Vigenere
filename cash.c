@@ -13,29 +13,25 @@ int main (void)
     }
     while (f < 0);
     cents = round(f * 100);
-    do
+    while ( cents > 24 )
     {
-       cents = cents - 25;
-       coins++ ;  
+      cents = cents - 25;
+      coins++ ;    
     }
-    while ( cents > 25 || cents == 25);
-    do
+    while ( cents > 9 )
     {
-       cents = cents - 10;
-       coins++ ;  
+      cents = cents - 10;
+      coins++ ;    
     }
-    while ( cents > 10 || cents == 10);
-    do
+    while ( cents > 4 )
     {
-       cents = cents - 5;
-       coins++ ;  
+      cents = cents - 5;
+      coins++ ;    
     }
-    while ( cents > 5 || cents == 5);
-    do
+    while ( cents > 0 )
     {
-       cents = cents - 1;
-       coins++ ;  
+      cents = cents - 1;
+      coins++ ;    
     }
-    while ( cents > 1 || cents == 1);
     printf("%i\n", coins);     
 }
