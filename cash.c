@@ -14,25 +14,26 @@ int main(void)
     }
     while (f < 0);
     cents = round(f * 100);
+    // start greedy algorithm
     while (cents > 24)
     {
-      cents = cents - 25;
-      coins++ ;    
+        cents = cents - 25;
+        coins++ ;    
     }
     while (cents > 9)
     {
-      cents = cents - 10;
-      coins++ ;    
+        cents = cents - 10;
+        coins++ ;    
     }
     while (cents > 4)
     {
-      cents = cents - 5;
-      coins++ ;    
+        cents = cents - 5;
+        coins++ ;    
     }
     while (cents > 0)
     {
-      cents = cents - 1;
-      coins++ ;    
+        cents = cents - 1;
+        coins++ ;    
     }
     printf("%i\n", coins);     
 }
