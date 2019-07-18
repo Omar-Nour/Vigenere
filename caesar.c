@@ -11,7 +11,7 @@ int main(int argc, string argv[])
     string charr = "null";
     if (argc > 1)
     {
-    charr = argv[1];
+        charr = argv[1];
     }
     // nD is non decimal
     int nD = 0;
