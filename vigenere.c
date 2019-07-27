@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         string KEY = argv[1];
         for (int i = 0; i < strlen(KEY); i++)
         {
-            if ( KEY[i] < 65 || ( KEY[i] > 90 && KEY[i] < 97 ) || KEY[i] > 122 )
+            if (KEY[i] < 65 || (KEY[i] > 90 && KEY[i] < 97) || KEY[i] > 122)
             {
                 nA = 1;    
             }
@@ -40,9 +40,9 @@ int main(int argc, string argv[])
         }
         string txt = get_string("plaintext: ");
         printf("ciphertext: ");
-        for (int i = 0,j = 0; i < strlen(txt); i++ , j++)
+        for (int i = 0, j = 0; i < strlen(txt); i++, j++)
         {
-            if ( txt[i] < 65 || ( txt[i] > 90 && txt[i] < 97 ) || txt[i] > 122 )
+            if (txt[i] < 65 || (txt[i] > 90 && txt[i] < 97) || txt[i] > 122)
             {
                 j--;
                 printf("%c", txt[i]);    
@@ -58,7 +58,7 @@ int main(int argc, string argv[])
         }  
         printf("\n");
         return 0;
-     }    
+    }    
 }
 
 // Functions/Procedures :
