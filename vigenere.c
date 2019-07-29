@@ -7,7 +7,6 @@ int shift(char c);
 
 int main(int argc, string argv[])
 {
-    int key[99999];
     // nA : is non-alphabetic
     int nA = 0;
     if (argc == 2)
@@ -29,18 +28,15 @@ int main(int argc, string argv[])
     else
     {
         // shift to an int key for each character
-        for (int i = 0; i < strlen(argv[1]); i++)
+        int key[strlen(argv[1])];
+        for (int i = 0, n = strlen(argv[1]); i < n; i++)
         {
             key[i] = shift(argv[1][i]);    
         }
         int length = strlen(argv[1]);
-        for (int j = 0; j < 999; j++)
-        {
-            key[j + length] = key[j];
-        }
         string txt = get_string("plaintext: ");
         printf("ciphertext: ");
-        for (int i = 0, j = 0; i < strlen(txt); i++, j++)
+        for (int i = 0, j = 0, n = strlen(txt); i < n; i++, j++)
         {
             if (txt[i] < 65 || (txt[i] > 90 && txt[i] < 97) || txt[i] > 122)
             {
@@ -54,6 +50,10 @@ int main(int argc, string argv[])
             else if islower(txt[i])
             {
                 printf("%c", (((txt[i] + key[j]) - 97) % 26) + 97);
+            }
+            if (j == (length - 1))
+            {
+                j = -1;
             }
         }  
         printf("\n");
