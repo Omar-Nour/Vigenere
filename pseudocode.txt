@@ -1,0 +1,1 @@
+check if no key or non-alphabetic key and output correct method
